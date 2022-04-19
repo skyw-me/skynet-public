@@ -63,7 +63,7 @@ apt install --yes --no-install-recommends wireguard
 # install cockpit
 echo_info "Installing cockpit..."
 . /etc/os-release
-apt install --yes --no-install-recommends -t ${VERSION_CODENAME}-backports cockpit cockpit-pcp cockpit-doc cockpit-storaged
+apt install --yes --no-install-recommends -t ${VERSION_CODENAME}-backports cockpit cockpit-pcp cockpit-doc cockpit-storaged cracklib-runtime
 
 # install docker
 # https://github.com/docker/docker-install
