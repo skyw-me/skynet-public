@@ -130,6 +130,13 @@ if ! grep -Fxq "net.core.default_qdisc=fq"    /etc/sysctl.conf ; then
     sysctl -p
 fi
 
+# set max UDP buffer for QUIC
+if ! grep -Fxq "net.core.rmem_max=2500000"    /etc/sysctl.conf ; then
+    echo       "net.core.rmem_max=2500000" >> /etc/sysctl.conf
+
+    sysctl -p
+fi
+
 ###############################################################################
 # Install resolvconf at last (May break DNS)
 ###############################################################################
