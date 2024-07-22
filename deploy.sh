@@ -14,8 +14,8 @@ git submodule update --init --recursive
 git submodule update --recursive --remote
 
 # Reveal secrets
-echo_info "Revealing secrets..."
-git secret reveal -f
+# echo_info "Revealing secrets..."
+# git secret reveal -f
 
 # Update and start containers
 echo_info "Updating docker images..."
